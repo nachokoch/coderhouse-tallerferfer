@@ -1,0 +1,415 @@
+// IMPORTS
+@import "variables";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// GLOBALES
+
+body {
+  background-color: #313131;
+}
+
+h1,
+h2 {
+  color: $primary;
+  font-family: $racing;
+  text-shadow: 5px 5px 5px black;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-family: $racing;
+}
+
+p {
+  color: $tertiary;
+}
+
+// SERVICIOS
+
+.tarjeta {
+  margin: 30px 50px;
+  height: 430px;
+  width: 20%;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, $primary, #ff3725);
+  color: #fff;
+  text-align: center;
+  font-family: $roboto;
+  font-size: 0.8rem;
+  transition: ease-in-out 0.5s;
+
+  .tarjeta__imagen {
+    height: 200px;
+    border-radius: 20px;
+    margin: 20px;
+  }
+
+  .tarjeta__titulo {
+    font-size: 1.3rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(36, 36, 36);
+  }
+
+  .tarjeta__texto {
+    color: #fff;
+  }
+}
+
+.tarjeta:hover {
+  transform: scale(1.3, 1.3);
+}
+
+// NOVEDADES
+
+.novedades {
+  margin: 10% 50px;
+  height: 300px;
+  width: 30%;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #fb4333, #ff3725);
+  color: #fff;
+  text-align: center;
+  font-family: $roboto;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: ease-in-out 0.5s;
+
+  .novedades__titulo {
+    padding-top: 10px;
+    background-color: $secondary;
+    padding-bottom: 10px;
+  }
+
+  .novedades__texto {
+    padding: 20px;
+  }
+
+  .novedades__fecha {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+// BOTON HOME
+
+.boton {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 20px;
+  font-family: $racing;
+  margin-top: 50px;
+
+  .boton__link {
+    color: $tertiary;
+  }
+
+  .boton__link:hover {
+    color: $primary;
+  }
+}
+
+.boton--principal {
+  background-color: $primary;
+}
+
+.boton:hover {
+  background-color: $tertiary;
+  color: $primary;
+}
+
+table {
+  color: $primary !important;
+  height: 90vh;
+}
+
+form {
+  color: $primary;
+}
+
+#videoFondo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.texto-centrado {
+  text-align: center;
+  padding-top: 10%;
+}
+
+//FOOTER
+
+footer {
+  background-image: linear-gradient(to bottom, $primary, #ff3725);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: $tertiary;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: $roboto;
+
+  .container {
+    display: flex;
+    padding: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .columna {
+    margin: 0 20px;
+  }
+
+  ul {
+    text-decoration: none;
+    list-style: none;
+  }
+
+  p {
+    color: #fff;
+  }
+}
+
+.seccion {
+  height: 90vh;
+  background-image: linear-gradient(to bottom, $secondary, rgb(20, 20, 20));
+}
+
+.margen-izquierdo {
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+.tarjeta-tabla ul,
+ol li {
+  list-style: none;
+}
+
+.productos ul {
+  margin-left: 50px;
+}
+
+.novedades h2 {
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+.contenedor {
+  display: flex;
+  width: 100%;
+}
+
+.tarjeta-novedades:hover {
+  transform: scale(1.3, 1.3);
+}
+
+.headerPagina {
+  animation-name: desdeLaIzquierda;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.campo {
+  width: 60%;
+  border-radius: 4px;
+  border: 1px solid black;
+  height: 30px;
+  color: black;
+
+  .campo-texto {
+    padding-bottom: 50px;
+    width: 60%;
+  }
+}
+
+.campo:focus {
+  background-color: white;
+}
+
+.carousel img {
+  margin: 0 auto;
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-image: linear-gradient(to bottom, $primary, #ff3725);
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  font-family: "Racing Sans One", cursive;
+  display: inline-block;
+  font-size: 22px;
+  color: $tertiary;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+  font-family: $racing;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+// RESPONSIVE
+
+@media (max-width: 600px) {
+  #videoFondo {
+    display: none;
+    background-color: $secondary;
+  }
+
+  .texto-centrado {
+    background-color: $secondary;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1168px) {
+  footer .columna {
+    display: none;
+  }
+}
+
+.iconos {
+  display: flex;
+}
+
+.icon {
+  font-size: 2rem;
+  padding: 20px;
+  color: white;
+}
+
+.icon:hover {
+  color: red;
+}
+
+.icon:visited {
+  color: $secondary;
+}
+
+.containerGrid {
+  width: 60%;
+  margin: 2rem auto;
+}
+
+// ANIMACIONES
+
+@keyframes desdeLaIzquierda {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
