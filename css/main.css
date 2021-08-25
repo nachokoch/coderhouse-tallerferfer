@@ -3,7 +3,7 @@
   padding: 0; }
 
 body {
-  background-color: #313131; }
+  background-color: #181818; }
 
 h1,
 h2 {
@@ -23,17 +23,29 @@ h3 {
 p {
   color: #fff; }
 
+.navbar-brand {
+  color: #fb4333;
+  font-family: "Racing Sans One", cursive; }
+
+.navbar-brand:hover {
+  color: #fff; }
+
+.nav-link {
+  color: #fb4333; }
+
+.nav-link:hover {
+  color: #fff; }
+
 .tarjeta {
   margin: 30px 50px;
-  height: 430px;
-  width: 20%;
   border-radius: 10px;
   background-image: linear-gradient(to bottom, #fb4333, #ff3725);
   color: #fff;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
-  transition: ease-in-out 0.5s; }
+  transition: ease-in-out 0.5s;
+  padding: 10px; }
   .tarjeta .tarjeta__imagen {
     height: 200px;
     border-radius: 20px;
@@ -63,7 +75,7 @@ p {
   transition: ease-in-out 0.5s; }
   .novedades .novedades__titulo {
     padding-top: 10px;
-    background-color: #313131;
+    background-color: #181818;
     padding-bottom: 10px; }
   .novedades .novedades__texto {
     padding: 20px; }
@@ -75,6 +87,7 @@ p {
   border: none;
   color: white;
   padding: 15px 32px;
+  margin-bottom: 200px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -82,8 +95,6 @@ p {
   border-radius: 20px;
   font-family: "Racing Sans One", cursive;
   margin-top: 50px; }
-  .boton .boton__link {
-    color: #fff; }
   .boton .boton__link:hover {
     color: #fb4333; }
 
@@ -101,46 +112,28 @@ table {
 form {
   color: #fb4333; }
 
-#videoFondo {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1; }
-
 .texto-centrado {
   text-align: center;
   padding-top: 10%; }
 
+.btn {
+  background-color: #fb4333;
+  color: #fff; }
+
+.btn:hover {
+  background-color: #fff;
+  color: #fb4333; }
+
 footer {
   background-image: linear-gradient(to bottom, #fb4333, #ff3725);
-  position: fixed;
   bottom: 0;
   width: 100%;
   color: #fff;
   margin: 0;
   padding: 0;
-  display: flex;
   font-family: "Roboto", sans-serif; }
-  footer .container {
-    display: flex;
-    padding: 20px;
-    flex-wrap: nowrap;
-    justify-content: center;
-    width: 100%; }
-  footer .columna {
-    margin: 0 20px; }
-  footer ul {
-    text-decoration: none;
-    list-style: none; }
   footer p {
     color: #fff; }
-
-.seccion {
-  height: 90vh;
-  background-image: linear-gradient(to bottom, #313131, #141414); }
 
 .margen-izquierdo {
   margin-left: 50px;
@@ -188,98 +181,17 @@ ol li {
   max-width: 100%;
   max-height: 100%; }
 
-.nav {
-  height: 50px;
-  width: 100%;
-  background-image: linear-gradient(to bottom, #fb4333, #ff3725);
-  position: relative; }
-
-.nav > .nav-header {
-  display: inline; }
-
-.nav > .nav-header > .nav-title {
-  font-family: "Racing Sans One", cursive;
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px; }
-
-.nav > .nav-btn {
-  display: none; }
-
-.nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px; }
-
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-  color: #efefef;
-  font-family: "Racing Sans One", cursive; }
-
-.nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3); }
-
-.nav > #nav-check {
-  display: none; }
-
 @media (max-width: 600px) {
-  #videoFondo {
-    display: none;
-    background-color: #313131; }
-  .texto-centrado {
-    background-color: #313131; }
   h1 {
     font-size: 6rem; }
   h2 {
     font-size: 4rem; }
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px; }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px; }
-  .nav > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3); }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee; }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px; }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%; }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px; }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto; }
   footer .container {
     flex-direction: column; } }
 
 @media (max-width: 1168px) {
   footer .columna {
     display: none; } }
-
-.iconos {
-  display: flex; }
 
 .icon {
   font-size: 2rem;
@@ -290,11 +202,14 @@ ol li {
   color: red; }
 
 .icon:visited {
-  color: #313131; }
+  color: #181818; }
 
 .containerGrid {
   width: 60%;
   margin: 2rem auto; }
+
+.seccion {
+  margin-bottom: 100px; }
 
 @keyframes desdeLaIzquierda {
   0% {

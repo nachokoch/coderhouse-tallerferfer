@@ -1,14 +1,16 @@
 // IMPORTS
+
 @import "variables";
+
+// GLOBALES
+
 * {
   margin: 0;
   padding: 0;
 }
 
-// GLOBALES
-
 body {
-  background-color: #313131;
+  background-color: $secondary;
 }
 
 h1,
@@ -34,12 +36,29 @@ p {
   color: $tertiary;
 }
 
+// NAVBAR
+
+.navbar-brand {
+  color: $primary;
+  font-family: $racing;
+}
+
+.navbar-brand:hover {
+  color: $tertiary;
+}
+
+.nav-link {
+  color: $primary;
+}
+
+.nav-link:hover {
+  color: $tertiary;
+}
+
 // SERVICIOS
 
 .tarjeta {
   margin: 30px 50px;
-  height: 430px;
-  width: 20%;
   border-radius: 10px;
   background-image: linear-gradient(to bottom, $primary, #ff3725);
   color: #fff;
@@ -47,6 +66,7 @@ p {
   font-family: $roboto;
   font-size: 0.8rem;
   transition: ease-in-out 0.5s;
+  padding: 10px;
 
   .tarjeta__imagen {
     height: 200px;
@@ -107,6 +127,7 @@ p {
   border: none;
   color: white;
   padding: 15px 32px;
+  margin-bottom: 200px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -114,10 +135,6 @@ p {
   border-radius: 20px;
   font-family: $racing;
   margin-top: 50px;
-
-  .boton__link {
-    color: $tertiary;
-  }
 
   .boton__link:hover {
     color: $primary;
@@ -142,59 +159,35 @@ form {
   color: $primary;
 }
 
-#videoFondo {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
 .texto-centrado {
   text-align: center;
   padding-top: 10%;
+}
+
+.btn {
+  background-color: $primary;
+  color: $tertiary;
+}
+
+.btn:hover {
+  background-color: $tertiary;
+  color: $primary;
 }
 
 //FOOTER
 
 footer {
   background-image: linear-gradient(to bottom, $primary, #ff3725);
-  position: fixed;
   bottom: 0;
   width: 100%;
   color: $tertiary;
   margin: 0;
   padding: 0;
-  display: flex;
   font-family: $roboto;
-
-  .container {
-    display: flex;
-    padding: 20px;
-    flex-wrap: nowrap;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .columna {
-    margin: 0 20px;
-  }
-
-  ul {
-    text-decoration: none;
-    list-style: none;
-  }
 
   p {
     color: #fff;
   }
-}
-
-.seccion {
-  height: 90vh;
-  background-image: linear-gradient(to bottom, $secondary, rgb(20, 20, 20));
 }
 
 .margen-izquierdo {
@@ -255,113 +248,15 @@ ol li {
   max-height: 100%;
 }
 
-.nav {
-  height: 50px;
-  width: 100%;
-  background-image: linear-gradient(to bottom, $primary, #ff3725);
-  position: relative;
-}
-
-.nav > .nav-header {
-  display: inline;
-}
-
-.nav > .nav-header > .nav-title {
-  font-family: "Racing Sans One", cursive;
-  display: inline-block;
-  font-size: 22px;
-  color: $tertiary;
-  padding: 10px 10px 10px 10px;
-}
-
-.nav > .nav-btn {
-  display: none;
-}
-
-.nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px;
-}
-
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-  color: #efefef;
-  font-family: $racing;
-}
-
-.nav > .nav-links > a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.nav > #nav-check {
-  display: none;
-}
-
 // RESPONSIVE
 
 @media (max-width: 600px) {
-  #videoFondo {
-    display: none;
-    background-color: $secondary;
-  }
-
-  .texto-centrado {
-    background-color: $secondary;
-  }
-
   h1 {
     font-size: 6rem;
   }
 
   h2 {
     font-size: 4rem;
-  }
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
   }
 
   footer .container {
@@ -373,10 +268,6 @@ ol li {
   footer .columna {
     display: none;
   }
-}
-
-.iconos {
-  display: flex;
 }
 
 .icon {
@@ -396,6 +287,10 @@ ol li {
 .containerGrid {
   width: 60%;
   margin: 2rem auto;
+}
+
+.seccion {
+  margin-bottom: 100px;
 }
 
 // ANIMACIONES
