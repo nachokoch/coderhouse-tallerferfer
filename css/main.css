@@ -36,6 +36,9 @@ p {
 .nav-link:hover {
   color: #fff; }
 
+.navbar {
+  padding: 20px; }
+
 .tarjeta {
   margin: 30px 50px;
   border-radius: 10px;
@@ -83,28 +86,6 @@ p {
     text-align: left;
     padding-left: 20px; }
 
-.boton {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  margin-bottom: 200px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  border-radius: 20px;
-  font-family: "Racing Sans One", cursive;
-  margin-top: 50px; }
-  .boton .boton__link:hover {
-    color: #fb4333; }
-
-.boton--principal {
-  background-color: #fb4333; }
-
-.boton:hover {
-  background-color: #fff;
-  color: #fb4333; }
-
 table {
   color: #fb4333 !important;
   height: 90vh; }
@@ -117,12 +98,16 @@ form {
   padding-top: 10%; }
 
 .btn {
+  margin: 50px 0;
   background-color: #fb4333;
   color: #fff; }
 
 .btn:hover {
   background-color: #fff;
   color: #fb4333; }
+
+#carouselExampleCaptions {
+  margin: 100px; }
 
 footer {
   background-image: linear-gradient(to bottom, #fb4333, #ff3725);
@@ -181,17 +166,19 @@ ol li {
   max-width: 100%;
   max-height: 100%; }
 
-@media (max-width: 600px) {
+.centrado {
+  justify-content: center; }
+
+.navbar-toggler {
+  background-color: #fb4333; }
+
+@media (max-width: 576px) {
   h1 {
     font-size: 6rem; }
   h2 {
     font-size: 4rem; }
-  footer .container {
-    flex-direction: column; } }
-
-@media (max-width: 1168px) {
-  footer .columna {
-    display: none; } }
+  .tarjeta {
+    max-width: 70%; } }
 
 .icon {
   font-size: 2rem;
