@@ -55,6 +55,10 @@ p {
   color: $tertiary;
 }
 
+.navbar {
+  padding: 20px;
+}
+
 // SERVICIOS
 
 .tarjeta {
@@ -121,35 +125,6 @@ p {
   }
 }
 
-// BOTON HOME
-
-.boton {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  margin-bottom: 200px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  border-radius: 20px;
-  font-family: $racing;
-  margin-top: 50px;
-
-  .boton__link:hover {
-    color: $primary;
-  }
-}
-
-.boton--principal {
-  background-color: $primary;
-}
-
-.boton:hover {
-  background-color: $tertiary;
-  color: $primary;
-}
-
 table {
   color: $primary !important;
   height: 90vh;
@@ -165,6 +140,7 @@ form {
 }
 
 .btn {
+  margin: 50px 0;
   background-color: $primary;
   color: $tertiary;
 }
@@ -172,6 +148,10 @@ form {
 .btn:hover {
   background-color: $tertiary;
   color: $primary;
+}
+
+#carouselExampleCaptions {
+  margin: 100px;
 }
 
 //FOOTER
@@ -248,9 +228,17 @@ ol li {
   max-height: 100%;
 }
 
+.centrado {
+  justify-content: center;
+}
+
+.navbar-toggler {
+  background-color: $primary;
+}
+
 // RESPONSIVE
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   h1 {
     font-size: 6rem;
   }
@@ -259,14 +247,8 @@ ol li {
     font-size: 4rem;
   }
 
-  footer .container {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 1168px) {
-  footer .columna {
-    display: none;
+  .tarjeta {
+    max-width: 70%;
   }
 }
 
